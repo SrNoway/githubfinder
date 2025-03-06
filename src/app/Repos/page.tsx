@@ -17,7 +17,7 @@ function ReposContent() {
         if (username) {
             setUser(username)
         }
-    }, [username])
+    }, [])
 
     const [repos, setRepos] = useState<RepoProps[] | [] | null>(null)
     const [loading, setLoading] = useState(false)
