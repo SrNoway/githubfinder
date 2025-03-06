@@ -27,9 +27,10 @@ export default function RootLayout({
       <body className="font-sans bg-slate-900 text-white">
         <header>
           <nav className="text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-center text-white pt-5">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-white pt-5">
         GitHub Finder
-      </h1>          </nav>
+      </h1>          
+      </nav>
         </header>
         {children}
         

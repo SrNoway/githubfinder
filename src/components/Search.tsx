@@ -14,7 +14,7 @@ export const Search = ({ loadUser }: SearchProps) => {
 
     return (
         <div className="flex flex-col items-center rounded-xl space-y-4 text-white bg-indigo-900 p-6 md:p-10 md:px-20">
-            <h2 className="font-bold text-2xl md:text-3xl ">Busque por um usuário:</h2>
+            <h2 className="font-bold text-[1.2rem] md:text-3xl ">Busque por um usuário:</h2>
             <p className="text-center text-gray-300">Conheça seus melhores repositórios</p>
             <div className="flex flex-row md:flex-row gap-2 md:w-auto" >
                 <input
