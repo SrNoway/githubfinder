@@ -1,12 +1,12 @@
 'use client'
-import { useState, useEffect, Suspense } from "react"
+import { useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import { BackBtn } from "@/components/BackBtn"
 import { RepoProps } from "@/types/repo"
 import { Loader } from "@/components/Loader"
 import { Repo } from "@/components/Repo"
 
-function ReposContent() {
+export default function Repos() {
     const searchParams = useSearchParams()
     const username = searchParams.get("username")
 
@@ -17,7 +17,7 @@ function ReposContent() {
         if (username) {
             setUser(username)
         }
-    }, [])
+    }, [username])
 
     const [repos, setRepos] = useState<RepoProps[] | [] | null>(null)
     const [loading, setLoading] = useState(false)
@@ -63,11 +63,4 @@ function ReposContent() {
             )}
         </div>
     )
-}
-export default function Repos() {
-    return (
-        <Suspense fallback={<div className="text-white text-center mt-[2rem]">Carregando...</div>}>
-            <ReposContent />
-        </Suspense>
-    );
 }
